@@ -13,6 +13,11 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeoutException;
 
+
+/**
+ * 一个生产者多个消费者，多个消费者是从同一个队列中取数据，同
+ * 一个消息只能被一个消费者消费
+ */
 public class OneSenderToManyConsumer {
 
 
@@ -119,6 +124,15 @@ public class OneSenderToManyConsumer {
         System.out.println("主线程运行结束-------------");
 
     }
+
+    /**
+     *1.如果先往消息队列中推送消息，然后开启消费者线程，rabbitMQ   会把消息全部交给先启动的消费者处理
+     *2.如果消息是自动确认的，这样的消息是不安全的
+     *3.可以使用ack 手动确认
+     *4.如果消息是自动确认的，队列会采用轮询的方式每个消费者消费的消息都是相同数量的
+     *5.如果是手动ack确认,队列在收到确认后就会继续分发，处理快的消费者处理的消息就多
+     */
+
 
 
 }
