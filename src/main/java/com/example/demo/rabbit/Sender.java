@@ -17,8 +17,10 @@ public class Sender {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        String message = "hello world";
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        for (int i = 0; i < 100; i++) {
+            String message = "hello world"+i;
+            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        }
         channel.close();
         connection.close();
 
