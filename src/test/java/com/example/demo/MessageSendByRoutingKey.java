@@ -23,6 +23,8 @@ public class MessageSendByRoutingKey {
 
     private final static String QUEEU_NAME2 = "test_queue_direct_2";
 
+    //test
+
 
     @Test
     public void createMessage() throws IOException, TimeoutException {
