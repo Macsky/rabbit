@@ -10,6 +10,7 @@ import java.util.concurrent.TimeoutException;
 public class Sender {
 
 
+    private final static String aaa="test";
     private final static String QUEUE_NAME = "q_test_01";
 
     private final static String bbb="bbbb";
