@@ -12,6 +12,8 @@ public class Sender {
 
     private final static String QUEUE_NAME = "q_test_01";
 
+    private final static String bbb="bbbb";
+
     public static void main(String[] args) throws IOException, TimeoutException {
 
         Connection connection = ConnectionUtil.getConnection();
