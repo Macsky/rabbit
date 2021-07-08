@@ -13,6 +13,7 @@ public class Sender {
     private final static String QUEUE_NAME = "q_test_01";
 
     private final static String bbb="bbbb";
+    private final static String ccc="ccc";
 
     public static void main(String[] args) throws IOException, TimeoutException {
 
